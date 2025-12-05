@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Chi Tiết Đơn Hàng</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#137fec",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: {
+            "display": ["Inter", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col">
+<div class="flex flex-1">
+<aside class="flex w-64 flex-col border-r border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark p-4">
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA4Y5-bN5zH--G2CoVUqTeR_qYoonNt1HZCPC8sVsLSCywwDBIXf7vgn2yT4oyXo1T3-8XlHUc1Zloz-gIw3eWS7CeVLTtvBgf3rhi6JZwTxzjih_Kv2wS1cpUzyCDxG-XjjZQb618ScSqTG5sCLbIVPHNrqZwoz8Ix-quEDOs32qt2vQFqvN7DKZvJ2Shzj1bazROy0kFs94PUpj2N3rZfCnQ86SLRidoxXresfvmRhxqoST2BvVOc8S0ZSrMzETi5JQUvzx_NRy4F");'></div>
+<div class="flex flex-col">
+<h1 class="text-gray-900 dark:text-gray-100 text-sm font-semibold leading-normal">Tên Người Dùng</h1>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Admin</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-primary/10 hover:text-primary" href="#">
+<span class="material-symbols-outlined text-xl">dashboard</span>
+<p class="text-sm font-medium leading-normal">Tổng quan</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 text-primary" href="#">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">list_alt</span>
+<p class="text-sm font-medium leading-normal">Danh sách Đơn hàng</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-primary/10 hover:text-primary" href="#">
+<span class="material-symbols-outlined text-xl">add_box</span>
+<p class="text-sm font-medium leading-normal">Tạo Đơn hàng</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-primary/10 hover:text-primary" href="#">
+<span class="material-symbols-outlined text-xl">group</span>
+<p class="text-sm font-medium leading-normal">Khách hàng</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-primary/10 hover:text-primary" href="#">
+<span class="material-symbols-outlined text-xl">settings</span>
+<p class="text-sm font-medium leading-normal">Cài đặt</p>
+</a>
+</nav>
+</div>
+<div class="mt-auto flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-primary/10 hover:text-primary" href="#">
+<span class="material-symbols-outlined text-xl">help</span>
+<p class="text-sm font-medium leading-normal">Trợ giúp</p>
+</a>
+</div>
+</aside>
+<main class="flex-1 p-6 lg:p-10">
+<div class="mx-auto max-w-4xl">
+<div class="mb-4">
+<button 
+onclick="window.location.href='Danhsachdonhang.html'"
+class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-3 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 gap-2 text-sm font-bold leading-normal tracking-[0.015em]">
+    <span class="material-symbols-outlined text-xl">arrow_back</span>
+    <span class="truncate">Quay lại</span>
+</button>
+</div>
+<div class="flex flex-wrap gap-2 mb-6">
+<a class="text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal hover:text-primary" href="#">Trang chủ</a>
+<span class="text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal">/</span>
+<a class="text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal hover:text-primary" href="#">Đơn hàng</a>
+<span class="text-gray-500 dark:text-gray-400 text-sm font-medium leading-normal">/</span>
+<span class="text-gray-800 dark:text-gray-200 text-sm font-medium leading-normal">Chi tiết đơn hàng #DH-12345</span>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-4 mb-8">
+<div class="flex min-w-72 flex-col gap-2">
+<div class="flex items-center gap-3">
+<p class="text-gray-900 dark:text-gray-50 text-3xl font-bold leading-tight">Chi tiết đơn hàng #DH-12345</p>
+<span class="inline-flex items-center rounded-full bg-green-100 dark:bg-green-900 px-2.5 py-0.5 text-xs font-medium text-green-800 dark:text-green-200">Hoàn thành</span>
+</div>
+<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">Xem thông tin chi tiết của đơn hàng.</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white gap-2 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90">
+<span class="material-symbols-outlined text-xl">edit</span>
+<span class="truncate">Chỉnh sửa</span>
+</button>
+</div>
+<div class="space-y-8">
+<div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark shadow-sm">
+<h2 class="text-gray-900 dark:text-gray-100 text-lg font-bold leading-tight p-4 border-b border-gray-200 dark:border-gray-800">Thông tin Đơn hàng</h2>
+<div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+<div class="flex flex-col"><p class="text-sm text-gray-500 dark:text-gray-400">MÃ KHÁCH HÀNG</p><p class="text-base font-medium text-gray-800 dark:text-gray-200">KH-001</p></div>
+<div class="flex flex-col"><p class="text-sm text-gray-500 dark:text-gray-400">NHÂN VIÊN SALE</p><p class="text-base font-medium text-gray-800 dark:text-gray-200">Nguyễn Văn A</p></div>
+<div class="flex flex-col"><p class="text-sm text-gray-500 dark:text-gray-400">NHÂN VIÊN ĐIỀU PHỐI</p><p class="text-base font-medium text-gray-800 dark:text-gray-200">Trần Thị B</p></div>
+<div class="flex flex-col"><p class="text-sm text-gray-500 dark:text-gray-400">DỊCH VỤ XÉT NGHIỆM</p><p class="text-base font-medium text-gray-800 dark:text-gray-200">NIPT</p></div>
+<div class="flex flex-col"><p class="text-sm text-gray-500 dark:text-gray-400">DỊCH VỤ KÈM</p><p class="text-base font-medium text-gray-800 dark:text-gray-200">Không có</p></div>
+<div class="flex flex-col"><p class="text-sm text-gray-500 dark:text-gray-400">TRẠNG THÁI ĐƠN HÀNG</p><p class="text-base font-medium text-green-600 dark:text-green-400">Đã có kết quả</p></div>
+</div>
+</div>
+<div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark shadow-sm">
+<h2 class="text-gray-900 dark:text-gray-100 text-lg font-bold leading-tight p-4 border-b border-gray-200 dark:border-gray-800">Thông tin khách hàng và thu mẫu</h2>
+<div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+<div class="flex flex-col"><p class="text-sm text-gray-500 dark:text-gray-400">HỌ VÀ TÊN KHÁCH HÀNG</p><p class="text-base font-medium text-gray-800 dark:text-gray-200">Nguyễn Thị B</p></div>
+<div class="flex flex-col"><p class="text-sm text-gray-500 dark:text-gray-400">SỐ ĐIỆN THOẠI</p><p class="text-base font-medium text-gray-800 dark:text-gray-200">0987 654 321</p></div>
+<div class="flex flex-col"><p class="text-sm text-gray-500 dark:text-gray-400">NGÀY SINH</p><p class="text-base font-medium text-gray-800 dark:text-gray-200">15/05/1995</p></div>
+<div class="flex flex-col"><p class="text-sm text-gray-500 dark:text-gray-400">SỐ CCCD / CMND</p><p class="text-base font-medium text-gray-800 dark:text-gray-200">123456789012</p></div>
+<div class="flex flex-col md:col-span-2"><p class="text-sm text-gray-500 dark:text-gray-400">ĐỊA CHỈ</p><p class="text-base font-medium text-gray-800 dark:text-gray-200">123 Đường ABC, Quận 1, TP. Hồ Chí Minh</p></div>
+<div class="flex flex-col"><p class="text-sm text-gray-500 dark:text-gray-400">NGÀY THU MẪU</p><p class="text-base font-medium text-gray-800 dark:text-gray-200">25/07/2024</p></div>
+<div class="flex flex-col md:col-span-2"><p class="text-sm text-gray-500 dark:text-gray-400">GHI CHÚ/TÊN BS CHỈ ĐỊNH</p><p class="text-base font-medium text-gray-800 dark:text-gray-200">Không có</p></div>
+</div>
+</div>
+<div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark shadow-sm">
+<h2 class="text-gray-900 dark:text-gray-100 text-lg font-bold leading-tight p-4 border-b border-gray-200 dark:border-gray-800">Sàng lọc trước sinh</h2>
+<div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+<div class="flex flex-col"><p class="text-sm text-gray-500 dark:text-gray-400">GEN LẶN</p><p class="text-base font-medium text-gray-800 dark:text-gray-200">Không</p></div>
+<div class="flex flex-col"><p class="text-sm text-gray-500 dark:text-gray-400">TUẦN THAI</p><p class="text-base font-medium text-gray-800 dark:text-gray-200">12 tuần 3 ngày</p></div>
+<div class="flex flex-col"><p class="text-sm text-gray-500 dark:text-gray-400">LOẠI THAI</p><p class="text-base font-medium text-gray-800 dark:text-gray-200">Thai đơn</p></div>
+</div>
+</div>
+<div class="rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-background-dark shadow-sm">
+<h2 class="text-gray-900 dark:text-gray-100 text-lg font-bold leading-tight p-4 border-b border-gray-200 dark:border-gray-800">Thông tin thanh toán</h2>
+<div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+<div class="flex flex-col"><p class="text-sm text-gray-500 dark:text-gray-400">ĐƠN GIÁ GHI NHẬN</p><p class="text-base font-medium text-gray-800 dark:text-gray-200">3,000,000 VNĐ</p></div>
+<div class="flex flex-col"><p class="text-sm text-gray-500 dark:text-gray-400">KHUYẾN MÃI</p><p class="text-base font-medium text-gray-800 dark:text-gray-200">500,000 VNĐ</p></div>
+<div class="flex flex-col"><p class="text-sm text-gray-500 dark:text-gray-400">PHÍ THU MẪU</p><p class="text-base font-medium text-gray-800 dark:text-gray-200">0 VNĐ</p></div>
+<div class="flex flex-col"><p class="text-sm text-gray-500 dark:text-gray-400">PHÍ VẬN CHUYỂN MẪU</p><p class="text-base font-medium text-gray-800 dark:text-gray-200">0 VNĐ</p></div>
+<div class="flex flex-col md:col-span-2"><p class="text-sm text-gray-500 dark:text-gray-400">BÊN CHỊU PHÍ VẬN CHUYỂN MẪU</p><p class="text-base font-medium text-gray-800 dark:text-gray-200">Công ty</p></div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+</body></html>

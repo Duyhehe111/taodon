@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tạo Đơn Hàng</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#2563EB", // Blue-600
+            "background-light": "#F0F4F8", // Slate-100
+            "background-dark": "#0F172A", // Slate-900
+          },
+          fontFamily: {
+            display: ["Lexend", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem", // 8px
+          },
+        },
+      },
+    };
+  </script>
+<style>
+    body {
+      font-family: 'Lexend', sans-serif;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-gray-100 antialiased">
+<div class="flex flex-col min-h-screen">
+<header class="bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm sticky top-0 z-10 shadow-sm">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="flex items-center">
+<span class="text-2xl font-bold tracking-tight text-gray-900 dark:text-white"></span>
+</div>
+<nav class="hidden md:flex items-center space-x-4">
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium" href="#">Trang Chủ</a>
+<a class="text-primary dark:text-primary px-3 py-2 rounded-md text-sm font-medium border-b-2 border-primary" href="#">Đơn Hàng</a>
+<a class="text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary px-3 py-2 rounded-md text-sm font-medium" href="#">Cài Đặt</a>
+</nav>
+<div class="flex items-center">
+<button class="p-2 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-slate-700">
+<span class="material-symbols-outlined">
+                account_circle
+              </span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+<div class="mb-8">
+<h1 class="text-3xl font-bold text-gray-900 dark:text-white">Tạo Đơn Hàng Mới</h1>
+<p class="mt-1 text-sm text-gray-600 dark:text-gray-400">Điền thông tin chi tiết dưới đây để tạo một đơn hàng mới.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<div class="lg:col-span-2 space-y-8">
+<section class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-sm">
+<h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Thông tin đơn hàng</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+       for="customer-id">
+  MÃ KHÁCH HÀNG
+</label>
+
+<input list="customer-list"
+       id="customer-id"
+       name="customer-id"
+       placeholder="Nhập hoặc chọn mã khách hàng..."
+       class="mt-1 block w-full rounded border-gray-300 dark:border-gray-600
+              bg-white dark:bg-slate-700 shadow-sm focus:border-primary
+              focus:ring-primary sm:text-sm appearance-none
+              px-3 h-10 cursor-text" />
+
+<datalist id="customer-list">
+  <option value="KH001"></option>
+  <option value="KH002"></option>
+  <option value="KH003"></option>
+  <option value="KH101"></option>
+  <option value="KH205"></option>
+</datalist>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="sales-staff">NHÂN VIÊN SALE</label>
+<select class="mt-1 block w-full rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="sales-staff" name="sales-staff">
+<option selected="">Nguyễn Văn A</option>
+<option>Trần Thị B</option>
+<option>Lê Văn C</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="coordinator-staff">NHÂN VIÊN ĐIỀU PHỐI</label>
+<select class="mt-1 block w-full rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="coordinator-staff" name="coordinator-staff">
+<option selected="">Phạm Thị D</option>
+<option>Hoàng Văn E</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="test-service">DỊCH VỤ XÉT NGHIỆM</label>
+<select class="mt-1 block w-full rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="test-service" name="test-service">
+<option selected="">Sàng lọc trước sinh (NIPT)</option>
+<option>Sàng lọc sơ sinh</option>
+<option>Xét nghiệm gen di truyền</option>
+</select>
+</div>
+<div>
+<label for="additional-service" class="block text-sm font-medium text-gray-700 dark:text-gray-300">
+  DỊCH VỤ KÈM
+</label>
+<input 
+  type="text" 
+  id="additional-service" 
+  name="additional-service"
+  placeholder="Nhập dịch vụ kèm..." 
+  class="mt-1 block w-full rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 shadow-sm 
+         focus:border-primary focus:ring-primary sm:text-sm"
+/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="order-status">TRẠNG THÁI ĐƠN HÀNG</label>
+<select class="mt-1 block w-full rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="order-status" name="order-status">
+<option selected="">Mới tạo</option>
+<option>Đã lấy mẫu</option>
+<option>Đang xử lý</option>
+<option>Hoàn thành</option>
+</select>
+</div>
+</div>
+</section>
+<section class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-sm">
+<h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Thông tin khách hàng và thu mẫu</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="customer-name">HỌ VÀ TÊN KHÁCH HÀNG</label>
+<input class="mt-1 block w-full rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="customer-name" name="customer-name" placeholder="Nguyễn Văn A" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="phone-number">SỐ ĐIỆN THOẠI</label>
+<input class="mt-1 block w-full rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="phone-number" name="phone-number" placeholder="0901234567" type="tel"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="dob">NGÀY SINH</label>
+<input class="mt-1 block w-full rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 shadow-sm focus:border-primary focus:ring-primary sm:text-sm text-gray-700 dark:text-gray-300" id="dob" name="dob" type="date"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="id-card">SỐ CCCD / CMND</label>
+<input class="mt-1 block w-full rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="id-card" name="id-card" placeholder="012345678912" type="text"/>
+</div>
+<div class="md:col-span-2">
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="address">ĐỊA CHỈ</label>
+<input class="mt-1 block w-full rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="address" name="address" placeholder="123 Đường ABC, Phường 1, Quận 1, TP. Hồ Chí Minh" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="collection-date">NGÀY THU MẪU</label>
+<input class="mt-1 block w-full rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 shadow-sm focus:border-primary focus:ring-primary sm:text-sm text-gray-700 dark:text-gray-300" id="collection-date" name="collection-date" type="date"/>
+</div>
+<div class="md:col-span-2">
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="notes-doctor">GHI CHÚ/TÊN BS CHỈ ĐỊNH</label>
+<textarea class="mt-1 block w-full rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="notes-doctor" name="notes-doctor" placeholder="Nhập ghi chú hoặc tên bác sĩ..." rows="3"></textarea>
+</div>
+</div>
+</section>
+<section class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-sm">
+<h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Sàng lọc trước sinh</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="recessive-gene">GEN LẶN</label>
+<select class="mt-1 block w-full rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="recessive-gene" name="recessive-gene">
+<option selected="">Không</option>
+<option>Có</option>
+</select>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="gestational-week">TUẦN THAI</label>
+<input class="mt-1 block w-full rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="gestational-week" name="gestational-week" placeholder="VD: 12 tuần 3 ngày" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="pregnancy-type">LOẠI THAI</label>
+<select class="mt-1 block w-full rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="pregnancy-type" name="pregnancy-type">
+<option selected="">Twins</option>
+<option>Singleton</option>
+</select>
+</div>
+</div>
+</section>
+<div class="flex justify-end items-center gap-4 mt-8">
+<button class="bg-gray-200 dark:bg-slate-700 text-gray-800 dark:text-gray-200 py-2 px-4 rounded-md shadow-sm text-base font-medium hover:bg-gray-300 dark:hover:bg-slate-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400" type="button">
+              Hủy
+            </button>
+<button 
+  class="bg-primary text-white py-2 px-6 rounded-md shadow-sm text-base font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
+  type="button"
+  onclick="window.location.href='taodonhangthanhcong.html'"
+>
+  Lưu đơn hàng
+</button>
+
+</div>
+</div>
+<div class="lg:col-span-1 space-y-8">
+<section class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-sm sticky top-24">
+<h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Thông tin thanh toán</h2>
+<div class="space-y-4">
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="recorded-price">ĐƠN GIÁ GHI NHẬN</label>
+<div class="relative mt-1">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<span class="text-gray-500 sm:text-sm">₫</span>
+</div>
+<input class="block w-full rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 pl-7 pr-12 focus:border-primary focus:ring-primary sm:text-sm" id="recorded-price" name="recorded-price" placeholder="0" type="text" value="10.000.000"/>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+<span class="text-gray-500 sm:text-sm">VND</span>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="promotion">KHUYẾN MÃI</label>
+<input class="mt-1 block w-full rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="promotion" name="promotion" placeholder="Nhập mã hoặc % khuyến mãi" type="text"/>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="collection-fee">PHÍ THU MẪU</label>
+<div class="relative mt-1">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<span class="text-gray-500 sm:text-sm">₫</span>
+</div>
+<input class="block w-full rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 pl-7 pr-12 focus:border-primary focus:ring-primary sm:text-sm" id="collection-fee" name="collection-fee" placeholder="0" type="text"/>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+<span class="text-gray-500 sm:text-sm">VND</span>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="shipping-fee">PHÍ VẬN CHUYỂN MẪU</label>
+<div class="relative mt-1">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+<span class="text-gray-500 sm:text-sm">₫</span>
+</div>
+<input class="block w-full rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 pl-7 pr-12 focus:border-primary focus:ring-primary sm:text-sm" id="shipping-fee" name="shipping-fee" placeholder="0" type="text"/>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+<span class="text-gray-500 sm:text-sm">VND</span>
+</div>
+</div>
+</div>
+<div>
+<label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="shipping-payer">BÊN CHỊU PHÍ VẬN CHUYỂN MẪU</label>
+<select class="mt-1 block w-full rounded border-gray-300 dark:border-gray-600 bg-white dark:bg-slate-700 shadow-sm focus:border-primary focus:ring-primary sm:text-sm" id="shipping-payer" name="shipping-payer">
+<option selected="">Novamed</option>
+<option>Phòng khám</option>
+<option>Share 50/50</option>
+</select>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
